@@ -34,6 +34,7 @@ COPY . .
 COPY --from=deps /learn-d/node_modules ./node_modules
 RUN yarn build
 
+
 FROM node:lts-alpine AS runner
 ARG X_TAG
 WORKDIR /learn-d
